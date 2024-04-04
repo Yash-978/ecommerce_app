@@ -22,3 +22,6 @@ samples, guidance on mobile development, and a full API reference.
 <p align="center">
 <img src="https://github.com/Yash-978/ecommerce_app/assets/147479013/16f6f9e5-6a96-41d1-bf68-700e0d2a4600" width=22% height=35%>
 </p>
+<p align="center">
+<img src="https://github.com/Yash-978/ecommerce_app/assets/147479013/85976192-0698-40bd-a61c-79b27a92b008" width=22% height=35%>
+</p>
