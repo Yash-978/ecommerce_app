@@ -58,7 +58,7 @@ void main() {
                       width: 140,
                       /*alignment: Alignment.topCenter, yaha par jo alignment
                        he woh iske last color green ke alignment ki wajah se
-                       bina center(widget) ke ho centre me aa rha he.*/
+                       bina center(widget) ke hi centre me aa rha he.*/
                       decoration: const BoxDecoration(
                         color: Colors.tealAccent,
                       ),
