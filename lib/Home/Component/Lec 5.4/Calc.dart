@@ -3,7 +3,22 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    Calc()
+  );
+}
+
+int count = 0;
+class Calc extends StatefulWidget {
+  const Calc({super.key});
+
+  @override
+  State<Calc> createState() => _CalcState();
+}
+
+class _CalcState extends State<Calc> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: '',
       home: Scaffold(
@@ -50,9 +65,9 @@ void main() {
                 children: [
                   InkWell(
                     onTap: () {
-                      // setState(() {
-                      //   count -= 2;
-                      // });
+                      setState(() {
+                        count -= 2;
+                      });
                     },
                     child: Container(
                       width: 180,
@@ -176,9 +191,9 @@ void main() {
                 children: [
                   InkWell(
                     onTap: () {
-                      // setState(() {
-                      //   count -= 2;
-                      // });
+                      setState(() {
+                        count -= 2;
+                      });
                     },
                     child: Container(
                       width: 180,
@@ -202,7 +217,6 @@ void main() {
                     ),
                   ),
 
-
                 ],
               ),
             ),
@@ -210,8 +224,6 @@ void main() {
           ],
         ),
       ),
-    ),
-  );
+    );
+  }
 }
-
-int count = 0;
