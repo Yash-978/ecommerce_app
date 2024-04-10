@@ -92,9 +92,9 @@ class _CalcState extends State<Calc> {
                   ),
                   InkWell(
                     onTap: () {
-                      // setState(() {
-                      //   count -= 2;
-                      // });
+                      setState(() {
+                        count += 2;
+                      });
                     },
                     child: Container(
                       width: 180,
@@ -128,9 +128,9 @@ class _CalcState extends State<Calc> {
                 children: [
                   InkWell(
                     onTap: () {
-                      // setState(() {
-                      //   count -= 2;
-                      // });
+                      setState(() {
+                        count -= 4;
+                      });
                     },
                     child: Container(
                       width: 180,
@@ -155,9 +155,9 @@ class _CalcState extends State<Calc> {
                   ),
                   InkWell(
                     onTap: () {
-                      // setState(() {
-                      //   count -= 2;
-                      // });
+                      setState(() {
+                        count += 4;
+                      });
                     },
                     child: Container(
                       width: 180,
@@ -192,7 +192,7 @@ class _CalcState extends State<Calc> {
                   InkWell(
                     onTap: () {
                       setState(() {
-                        count -= 2;
+                        count = 0;
                       });
                     },
                     child: Container(
