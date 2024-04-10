@@ -23,7 +23,7 @@ class _CalcState extends State<Calc> {
       title: '',
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blueAccent,
+          backgroundColor: Color(0xff54759E),
           centerTitle: true,
           title: const Text(
             'Calc',
@@ -51,7 +51,6 @@ class _CalcState extends State<Calc> {
           children: [
             Text(
               '$count',
-
               style: const TextStyle(
                 color: Colors.black,
                 fontSize: 80,
@@ -73,10 +72,10 @@ class _CalcState extends State<Calc> {
                       width: 180,
                       height: 80,
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: Color(0xff54759E),
                         shape: BoxShape.rectangle,
-                        border: Border.all(color: Colors.black, width: 2),
-                        borderRadius: BorderRadius.circular(30),
+                        border: Border.all(color: Colors.black, width: 1),
+                        borderRadius: BorderRadius.circular(20),
                       ),
                       child: const Center(
                         child: Text(
@@ -100,10 +99,10 @@ class _CalcState extends State<Calc> {
                       width: 180,
                       height: 80,
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: Color(0xff54759E),
                         shape: BoxShape.rectangle,
-                        border: Border.all(color: Colors.black, width: 2),
-                        borderRadius: BorderRadius.circular(30),
+                        border: Border.all(color: Colors.black, width: 1),
+                        borderRadius: BorderRadius.circular(20),
                       ),
                       child: const Center(
                         child: Text(
@@ -136,10 +135,10 @@ class _CalcState extends State<Calc> {
                       width: 180,
                       height: 80,
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: Color(0xff54759E),
                         shape: BoxShape.rectangle,
-                        border: Border.all(color: Colors.black, width: 2),
-                        borderRadius: BorderRadius.circular(30),
+                        border: Border.all(color: Colors.black, width: 1),
+                        borderRadius: BorderRadius.circular(20),
                       ),
                       child: const Center(
                         child: Text(
@@ -163,10 +162,10 @@ class _CalcState extends State<Calc> {
                       width: 180,
                       height: 80,
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: Color(0xff54759E),
                         shape: BoxShape.rectangle,
-                        border: Border.all(color: Colors.black, width: 2),
-                        borderRadius: BorderRadius.circular(30),
+                        border: Border.all(color: Colors.black, width: 1),
+                        borderRadius: BorderRadius.circular(20),
                       ),
                       child: const Center(
                         child: Text(
@@ -199,10 +198,10 @@ class _CalcState extends State<Calc> {
                       width: 180,
                       height: 80,
                       decoration: BoxDecoration(
-                        color: Colors.blue,
+                        color: Color(0xff54759E),
                         shape: BoxShape.rectangle,
-                        border: Border.all(color: Colors.black, width: 2),
-                        borderRadius: BorderRadius.circular(30),
+                        border: Border.all(color: Colors.black, width: 1),
+                        borderRadius: BorderRadius.circular(20),
                       ),
                       child: const Center(
                         child: Text(
