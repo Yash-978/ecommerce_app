@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,159 +19,199 @@ void main() {
           ),
           leading: const Icon(
             Icons.menu,
+            color: Colors.white,
           ),
           actions: const [
             Padding(
               padding: EdgeInsets.all(12),
-              child: Icon(Icons.notification_add),
+              child: Icon(
+                Icons.notification_add,
+                color: Colors.white,
+              ),
             ),
           ],
         ),
-        body: Align(
-          alignment: Alignment.center,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              '$count',
+
+              style: const TextStyle(
+                color: Colors.black,
+                fontSize: 80,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
+                  InkWell(
+                    onTap: () {
+                      // setState(() {
+                      //   count -= 2;
+                      // });
+                    },
                     child: Container(
-                      alignment: Alignment.center,
-                      height: 100,
-                      width: 200,
+                      width: 180,
+                      height: 80,
                       decoration: BoxDecoration(
-                        color: Colors.blueAccent,
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(30),
-                        ),
-                        border: Border.all(color: Colors.black, width: 2),
+                        color: Colors.blue,
                         shape: BoxShape.rectangle,
+                        border: Border.all(color: Colors.black, width: 2),
+                        borderRadius: BorderRadius.circular(30),
                       ),
                       child: const Center(
                         child: Text(
                           '-2',
                           style: TextStyle(
-                            color: Colors.black,
+                            color: Colors.white,
+                            fontSize: 40,
                             fontWeight: FontWeight.bold,
-                            fontSize: 50,
                           ),
                         ),
                       ),
                     ),
                   ),
-                  Align(
-                      // alignment: Alignment.bottomCenter,
-                      child: Container(
-                        child: Container(
-                          alignment: Alignment.topRight,
-                          height: 100,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            color: Colors.blueAccent,
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(30),
-                            ),
-                            border: Border.all(color: Colors.black, width: 2),
-                            shape: BoxShape.rectangle,
-                          ),
-                          child: const Center(
-                            child: Text(
-                              '-2',
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 50,
-                              ),
-                            ),
+                  InkWell(
+                    onTap: () {
+                      // setState(() {
+                      //   count -= 2;
+                      // });
+                    },
+                    child: Container(
+                      width: 180,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        shape: BoxShape.rectangle,
+                        border: Border.all(color: Colors.black, width: 2),
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          '+2',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold,
                           ),
                         ),
-                      ),
-                  ),
-        // ///////////////////////////////////////////////////
-        //                 Align(
-        //                   alignment: Alignment.center,
-        //                   child: Column(
-        //                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-        //                     children: [
-        //                     Row(
-        //                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        //                     children: [
-        //                           Container(
-        //                           child: Container(
-        //                           alignment: Alignment.center,
-        //                             height: 100,
-        //                             width: 200,
-        //                             decoration: BoxDecoration(
-        //                               color: Colors.blueAccent,
-        //                               borderRadius: BorderRadius.all(
-        //                                 Radius.circular(30),
-        //                               ),
-        //                               border: Border.all(color: Colors.black, width: 2),
-        //                               shape: BoxShape.rectangle,
-        //                             ),
-        //                             child: const Center(
-        //                               child: Text(
-        //                                 '-2',
-        //                                 style: TextStyle(
-        //                                   color: Colors.black,
-        //                                   fontWeight: FontWeight.bold,
-        //                                   fontSize: 50,
-        //                                 ),
-        //                               ),
-        //                             ),
-        //                           ),
-        //                 ),
-        //                       Align(
-        //                         // alignment: Alignment.bottomCenter,
-        //                         child: Container(
-        //                           child: Container(
-        //                             alignment: Alignment.topRight,
-        //                             height: 100,
-        //                             width: 200,
-        //                             decoration: BoxDecoration(
-        //                               color: Colors.blueAccent,
-        //                               borderRadius: BorderRadius.all(
-        //                                 Radius.circular(30),
-        //                               ),
-        //                               border: Border.all(color: Colors.black, width: 2),
-        //                               shape: BoxShape.rectangle,
-        //                             ),
-        //                             child: const Center(
-        //                               child: Text(
-        //                                 '-2',
-        //                                 style: TextStyle(
-        //                                   color: Colors.black,
-        //                                   fontWeight: FontWeight.bold,
-        //                                   fontSize: 50,
-        //                                 ),
-        //                               ),
-        //                             ),
-        //                           ),
-        //                         ),
-        //                       ),
-
-
-                ],
-
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Align(
-                      child: Container(
-                        ,
                       ),
                     ),
                   )
+
                 ],
               ),
-            ],
-          ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      // setState(() {
+                      //   count -= 2;
+                      // });
+                    },
+                    child: Container(
+                      width: 180,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        shape: BoxShape.rectangle,
+                        border: Border.all(color: Colors.black, width: 2),
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          '-4',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      // setState(() {
+                      //   count -= 2;
+                      // });
+                    },
+                    child: Container(
+                      width: 180,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        shape: BoxShape.rectangle,
+                        border: Border.all(color: Colors.black, width: 2),
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          '+4',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  )
+
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      // setState(() {
+                      //   count -= 2;
+                      // });
+                    },
+                    child: Container(
+                      width: 180,
+                      height: 80,
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        shape: BoxShape.rectangle,
+                        border: Border.all(color: Colors.black, width: 2),
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                      child: const Center(
+                        child: Text(
+                          'Clear',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+
+
+                ],
+              ),
+            ),
+
+          ],
         ),
       ),
     ),
   );
 }
+
+int count = 0;
