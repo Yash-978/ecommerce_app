@@ -1,5 +1,5 @@
-/*
-import 'package:ecommerce_app/Home/Component/Lec%205.1/trial%20file.dart';
+// import 'package:ecommerce_app/Home/Component/Lec%205.1/trial%20file.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,10 +9,9 @@ void main() {
       title: '',
       home: Scaffold(
         appBar: AppBar(
-          centerTitle: true,
+            centerTitle: true,
             backgroundColor: Colors.blue,
-            title:
-            const Text(
+            title: const Text(
               'Map',
               style: TextStyle(
                 color: Colors.white,
@@ -23,23 +22,241 @@ void main() {
               Icons.menu,
               color: Colors.white,
             )),
-        body: const Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        backgroundColor: Colors.black,
+        body: Column(
           children: [
-            MapList(iconname: const Icon(Icons.exit_to_app_rounded,size: ,), name: 'Exit'),
-            // InkWell(
-            //
-            // ),
-            SizedBox(
-              width: 15,
-
+            const SizedBox(
+              height: 15,
             ),
-            Text(
-              '$name',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
+            Container(
+              // margin: EdgeInsets.only(top: 15),
+              child: const Row(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Exit',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 30,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 280),
+                    child: Icon(
+                      Icons.exit_to_app,
+                    ),
+                  ),
+                ],
+              ),
+              height: 70,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+
+              ),
+            ),
+            
+            Container(
+              margin: const EdgeInsets.only(top: 15),
+              child:  Row(
+                children: [
+
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Play',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 30,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 280),
+                    child: Icon(
+                      Icons.exit_to_app,
+                    ),
+                  ),
+                ],
+              ),
+              height: 70,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 15),
+              child: const Row(
+                children: [
+
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Exit',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 30,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 280),
+                    child: Icon(
+                      Icons.exit_to_app,
+                    ),
+                  ),
+                ],
+              ),
+              height: 70,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 15),
+              child: const Row(
+                children: [
+
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Exit',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 30,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 280),
+                    child: Icon(
+                      Icons.exit_to_app,
+                    ),
+                  ),
+                ],
+              ),
+              height: 70,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 15),
+              child: const Row(
+                children: [
+
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Exit',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 30,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 280),
+                    child: Icon(
+                      Icons.exit_to_app,
+                    ),
+                  ),
+                ],
+              ),
+              height: 70,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 15),
+              child: const Row(
+                children: [
+
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Exit',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 30,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 280),
+                    child: Icon(
+                      Icons.exit_to_app,
+                    ),
+                  ),
+                ],
+              ),
+              height: 70,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 15),
+              child: const Row(
+                children: [
+
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Exit',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 30,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 280),
+                    child: Icon(
+                      Icons.exit_to_app,
+                    ),
+                  ),
+                ],
+              ),
+              height: 70,
+              decoration: const BoxDecoration(
+                color: Colors.white,
+
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.only(top: 15),
+              child: const Row(
+                children: [
+
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Exit',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 30,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(left: 280),
+                    child: Icon(
+                      Icons.exit_to_app,
+                    ),
+                  ),
+                ],
+              ),
+              height: 70,
+              decoration: const BoxDecoration(
+                color: Colors.white,
 
               ),
             ),
@@ -49,8 +266,10 @@ void main() {
     ),
   );
 }
+
 // int name,iconname;
 // class MyApp exte
+/*
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -61,14 +280,11 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-
-    );
+    return const Scaffold();
   }
 }
-
 */
-
+/*
 import 'package:flutter/material.dart';
 
 void main() {
@@ -151,3 +367,5 @@ Container MapList({required Icon iconname, required String name}) {
     ),
   );
 }
+
+ */
