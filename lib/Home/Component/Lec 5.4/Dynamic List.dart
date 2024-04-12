@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 
 void main() {
@@ -85,7 +86,9 @@ class _Dynamic_listState extends State<Dynamic_list> {
         );
   }
 }
-/*
+*/
+
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -217,5 +220,3 @@ class _Dynamic_listState extends State<Dynamic_list> {
     );
   }
 }
-
- */
