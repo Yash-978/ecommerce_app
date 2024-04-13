@@ -125,6 +125,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 */
+/*
 import 'Package:flutter/Material.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -213,3 +214,27 @@ void main() {
     ),
   );
 }
+
+ */
+import 'package:ecommerce_app/Home/Component/Lec%205.1/trial%20file.dart';
+import 'package:flutter/material.dart';
+
+import 'Home/Component/Lec 5.4/Icons.dart';
+void main()
+{
+  runApp(MyApp(),);
+}
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+    home: IconEditor(
+
+    ),
+    );
+  }
+}
+
