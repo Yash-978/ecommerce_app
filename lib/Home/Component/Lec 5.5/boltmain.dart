@@ -1,4 +1,4 @@
-// import 'package:ecommerce_app/Home/Component/Lec%205.1/trial%20file.dart';
+// // import 'package:ecommerce_app/Home/Component/Lec%205.1/trial%20file.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -44,7 +44,7 @@ class _BoltState extends State<Bolt> {
           child: Container(
             alignment: Alignment.center,
             height: double.infinity,
-            width: 50,
+            width: 70,
             color: Colors.black,
             child: Text(
               '⚡',

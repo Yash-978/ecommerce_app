@@ -220,6 +220,8 @@ import 'package:ecommerce_app/Home/Component/Lec%205.1/trial%20file.dart';
 import 'package:flutter/material.dart';
 
 import 'Home/Component/Lec 5.4/Icons.dart';
+import 'Home/Component/Lec 5.5/Splitter.dart';
+import 'Home/Component/Lec 5.5/Wall.dart';
 void main()
 {
   runApp(MyApp(),);
@@ -231,10 +233,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-    home: IconEditor(
-
-    ),
+    home : SPLITTER(),
     );
   }
 }
 
+//or sir ye emulator run nhi ho rha he? : abhi jo chrome mhai vo thik hai ya ??? ha par ye abhi just hi aise direct hua he
+//emulator download kiya he purso hi
+//or sir run flutter upgrade likha hua aa rha he woh kaha par karu? OK
+//sir ye kya hua.? : still flutter upokgrade nahi ho raha hai try letter..
+//ok sir done..?done ok disoconnet kar lo😁
