@@ -158,6 +158,8 @@ class _IconsEditorState extends State<IconsEditor> {
 
 
  */
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
 class IconsEditor extends StatefulWidget {
@@ -190,32 +192,8 @@ class _IconsEditorState extends State<IconsEditor> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Container(
-              margin: EdgeInsets.all(20),
-              height: 300,
-              width: 400,
-              decoration: BoxDecoration(
-                color: Color(0xffFAFAFA),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 10,
-                    spreadRadius: 10,
-                  ),
-                ],
-                borderRadius: BorderRadius.circular(20),
-                // boxShadow: ,
-                border: Border.all(
-                  color: Colors.black12,
-                  width: 0.25,
-                ),
-              ),
-              child: Icon(
-                Icons.arrow_back_ios_rounded,
-                color: Colors.black,
-                size: 80,
-              ),
-            ),
+
+            Arrow_container(),
             Container(
               height: 60,
               width: 370,
@@ -241,42 +219,7 @@ class _IconsEditorState extends State<IconsEditor> {
                 ),
               ),
             ),
-            Container(
-              width: 370,
-              height: 80,
-              decoration: BoxDecoration(
-                color: Color(0xffFAFAFA),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 10,
-                    spreadRadius: 10,
-                  ),
-                ],
-                border: Border.all(color: Colors.black12, width: 0.25),
-                borderRadius: BorderRadius.circular(25),
-              ),
-              child: SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                physics: BouncingScrollPhysics(
-
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      height: 60,
-                      margin: EdgeInsets.all(10),
-                      width: 60,
-                      decoration: BoxDecoration(
-                        color: Colors.red,
-                        border: Border.all(color: Colors.black12, width: 0.25),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
+            color_shades(),
             Container(
               height: 60,
               width: 370,
@@ -302,46 +245,138 @@ class _IconsEditorState extends State<IconsEditor> {
                 ),
               ),
             ),
-            Container(
-              width: 380,
-              height: 80,
-              decoration: BoxDecoration(
-                color: Color(0xffFAFAFA),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 10,
-                    spreadRadius: 10,
+            Icon_selection(),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Container Icon_selection() {
+    return Container(
+            width: 380,
+            height: 80,
+            decoration: BoxDecoration(
+              color: Color(0xffFAFAFA),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 10,
+                  spreadRadius: 10,
+                ),
+              ],
+              border: Border.all(color: Colors.black12, width: 0.25),
+              borderRadius: BorderRadius.circular(25),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  child: Icon(
+                    Icons.watch,
+                    color: Colors.blue,
                   ),
-                ],
-                border: Border.all(color: Colors.black12, width: 0.25),
-                borderRadius: BorderRadius.circular(25),
+                  height: 60,
+                  margin: EdgeInsets.all(10),
+                  width: 60,
+                  decoration: BoxDecoration(
+                    color: Color(0xffFAFAFA),
+                    border: Border.all(
+                      color: Colors.black12,
+                      width: 1,
+                    ),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ],
+            ),
+          );
+  }
+
+  Container color_shades() {
+    return Container(
+            width: 370,
+            height: 80,
+            decoration: BoxDecoration(
+              color: Color(0xffFAFAFA),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 10,
+                  spreadRadius: 10,
+                ),
+              ],
+              border: Border.all(color: Colors.black12, width: 0.25),
+              borderRadius: BorderRadius.circular(25),
+            ),
+            child: SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              physics: BouncingScrollPhysics(
+
               ),
               child: Row(
                 children: [
                   Container(
-                    child: Icon(
-                      Icons.watch,
-                      color: Colors.blue,
-                    ),
                     height: 60,
                     margin: EdgeInsets.all(10),
                     width: 60,
                     decoration: BoxDecoration(
-                      color: Color(0xffFAFAFA),
-                      border: Border.all(
-                        color: Colors.black12,
-                        width: 1,
-                      ),
+                      color: Colors.red,
+                      border: Border.all(color: Colors.black12, width: 0.25),
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
                 ],
               ),
             ),
-          ],
-        ),
-      ),
-    );
+          );
+  }
+
+  Container Arrow_container() {
+    return Container(
+            margin: EdgeInsets.all(20),
+            height: 300,
+            width: 400,
+            decoration: BoxDecoration(
+              color: Color(0xffFAFAFA),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black12,
+                  blurRadius: 10,
+                  spreadRadius: 10,
+                ),
+              ],
+              borderRadius: BorderRadius.circular(20),
+              // boxShadow: ,
+              border: Border.all(
+                color: Colors.black12,
+                width: 0.25,
+              ),
+            ),
+            child: Icon(
+              Icons.arrow_back_ios_rounded,
+              color: Colors.black,
+              size: 80,
+            ),
+          );
   }
 }
+List iconList = [
+  Icons.add,
+  Icons.remove,
+  Icons.access_alarm_outlined,
+  Icons.notification_add,
+  Icons.home,
+  Icons.shopping_cart,
+  Icons.adb_rounded,
+  Icons.add_a_photo_outlined,
+  Icons.add_call,
+
+];
+List colorList =[
+  Colors.indigo,
+  Colors.blue,
+  Colors.green,
+  Colors.yellow,
+  Colors.orange,
+  Colors.red,
+];
