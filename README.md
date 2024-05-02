@@ -43,9 +43,6 @@ samples, guidance on mobile development, and a full API reference.
 
 
 
-<p align="center">
-<video src="https://github.com/Yash-978/ecommerce_app/assets/147479013/262c21e7-f553-46c4-b11d-7288961ad653" width=22% height=35%>
-</p>
 
-https://github.com/Yash-978/ecommerce_app/assets/147479013/baf73d4a-0271-4d3e-a3d0-d5517f6a45b4
+
 
