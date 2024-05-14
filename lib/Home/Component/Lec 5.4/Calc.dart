@@ -1,11 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(
-    Calc()
-  );
-}
+
 
 int count = 0;
 class Calc extends StatefulWidget {

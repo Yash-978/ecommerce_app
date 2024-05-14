@@ -88,24 +88,8 @@ class _Dynamic_listState extends State<Dynamic_list> {
 }
 */
 
-
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Dynamic_list(),
-    );
-  }
-}
 
 class Dynamic_list extends StatefulWidget {
   const Dynamic_list({super.key});
@@ -119,49 +103,22 @@ class _Dynamic_listState extends State<Dynamic_list> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blue,
+        centerTitle: true,
+        backgroundColor: Color(0xff244D61),
         title: const Text(
           'Dynamic List',
           style: TextStyle(
             color: Colors.white,
             fontSize: 25,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w500,
           ),
         ),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Dynamic(
-              Num: Text('1'),
-            ),
-            Dynamic(
-              Num: Text('2'),
-            ),
-            Dynamic(
-              Num: Text('3'),
-            ),
-            Dynamic(
-              Num: Text('4'),
-            ),
-            Dynamic(
-              Num: Text('5'),
-            ),
-            Dynamic(
-              Num: Text('6'),
-            ),
-            Dynamic(
-              Num: Text('7'),
-            ),
-            Dynamic(
-              Num: Text('8'),
-            ),
-            Dynamic(
-              Num: Text('9'),
-            ),
-            Dynamic(
-              Num: Text('10'),
-            ),
+           ...List.generate(l1.length, (index) => textContainer(index: l1[index])),
+
 
             // Dynamic(Num: ),
             // List.generate(Dynamic.length, (index) => )
@@ -172,8 +129,11 @@ class _Dynamic_listState extends State<Dynamic_list> {
         mainAxisSize: MainAxisSize.min,
         children: [
           FloatingActionButton(
+            shape: CircleBorder(),
             onPressed: () {
-              setState(() {});
+              setState(() {
+                l1.add(l1.length+1);
+              });
             },
             child: Icon(
               Icons.add,
@@ -182,9 +142,15 @@ class _Dynamic_listState extends State<Dynamic_list> {
             ),
             backgroundColor: Color(0xff244D61),
           ),
+          SizedBox(
+            width: 10,
+          ),
           FloatingActionButton(
+            shape: CircleBorder(),
             onPressed: () {
-              setState(() {});
+              setState(() {
+                l1.removeAt(l1.length-1);
+              });
             },
             child: Icon(
               Icons.remove,
@@ -198,25 +164,29 @@ class _Dynamic_listState extends State<Dynamic_list> {
     );
   }
 
-  Container Dynamic({required Text Num}) {
-    return Container(
-      margin: EdgeInsets.all(2),
-      height: 80,
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: Colors.blue,
-        borderRadius: BorderRadius.circular(15),
-      ),
-      child: Center(
-        child: Text(
-          '$Num',
-          style: const TextStyle(
-            color: Colors.white,
-            fontWeight: FontWeight.bold,
-            fontSize: 25,
+  Widget textContainer({required index}) {
+    return Padding(
+      padding: const EdgeInsets.all(7.0),
+      child: Container(
+        // margin: EdgeInsets.all(2),
+        height: 110,
+        width: double.infinity,
+        decoration: BoxDecoration(
+          color: (index%2==0)?Color(0xff75E2FF):Color(0xff5689C0),
+          borderRadius: BorderRadius.circular(15),
+        ),
+        child: Center(
+          child: Text(
+            '${index}',
+            style: const TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 25,
+            ),
           ),
         ),
       ),
     );
   }
 }
+List <int>l1=[1];

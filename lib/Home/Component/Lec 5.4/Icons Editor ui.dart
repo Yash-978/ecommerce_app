@@ -158,7 +158,6 @@ class _IconsEditorState extends State<IconsEditor> {
 
 
  */
-import 'dart:html';
 
 import 'package:flutter/material.dart';
 
@@ -192,8 +191,32 @@ class _IconsEditorState extends State<IconsEditor> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-
-            Arrow_container(),
+            Container(
+              margin: EdgeInsets.all(20),
+              height: 300,
+              width: 400,
+              decoration: BoxDecoration(
+                color: Color(0xffFAFAFA),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 10,
+                    spreadRadius: 10,
+                  ),
+                ],
+                borderRadius: BorderRadius.circular(20),
+                // boxShadow: ,
+                border: Border.all(
+                  color: Colors.black12,
+                  width: 0.25,
+                ),
+              ),
+              child: Icon(
+                selecticon,
+                color: selectcolor,
+                size: 80,
+              ),
+            ),
             Container(
               height: 60,
               width: 370,
@@ -219,7 +242,38 @@ class _IconsEditorState extends State<IconsEditor> {
                 ),
               ),
             ),
-            color_shades(),
+        Container(
+          width: 370,
+          height: 80,
+          decoration: BoxDecoration(
+            color: Color(0xffFAFAFA),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black12,
+                blurRadius: 10,
+                spreadRadius: 10,
+              ),
+            ],
+            border: Border.all(color: Colors.black12, width: 0.25),
+            borderRadius: BorderRadius.circular(25),
+          ),
+          child: SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            physics: BouncingScrollPhysics(),
+            child: Row(
+              children: [
+                ...List.generate(colorList.length, (index) => GestureDetector(onTap: () {
+                  setState(() {
+                    selectcolor=colorList[index];
+                  });
+                },
+                    child: colorBox(colorList[index])),),
+              ],
+            ),
+          ),
+        ),
+
+
             Container(
               height: 60,
               width: 370,
@@ -245,34 +299,46 @@ class _IconsEditorState extends State<IconsEditor> {
                 ),
               ),
             ),
-            Icon_selection(),
+            Container(
+              width: 380,
+              height: 80,
+              decoration: BoxDecoration(
+                color: Color(0xffFAFAFA),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 10,
+                    spreadRadius: 10,
+                  ),
+                ],
+                border: Border.all(color: Colors.black12, width: 0.25),
+                borderRadius: BorderRadius.circular(25),
+              ),
+              child: SingleChildScrollView(
+                physics: BouncingScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    ...List.generate(iconList.length, (index) => GestureDetector(onTap: () {
+                      setState(() {
+                        selecticon=iconList[index];
+                      });
+                    },
+                        child: iconBox(iconList[index])),),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
     );
   }
 
-  Container Icon_selection() {
+  Container iconBox(IconData icons) {
     return Container(
-            width: 380,
-            height: 80,
-            decoration: BoxDecoration(
-              color: Color(0xffFAFAFA),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black12,
-                  blurRadius: 10,
-                  spreadRadius: 10,
-                ),
-              ],
-              border: Border.all(color: Colors.black12, width: 0.25),
-              borderRadius: BorderRadius.circular(25),
-            ),
-            child: Row(
-              children: [
-                Container(
                   child: Icon(
-                    Icons.watch,
+                    icons,
                     color: Colors.blue,
                   ),
                   height: 60,
@@ -286,80 +352,23 @@ class _IconsEditorState extends State<IconsEditor> {
                     ),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                ),
-              ],
-            ),
-          );
+                );
   }
 
-  Container color_shades() {
+  Container colorBox(Color color) {
     return Container(
-            width: 370,
-            height: 80,
-            decoration: BoxDecoration(
-              color: Color(0xffFAFAFA),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black12,
-                  blurRadius: 10,
-                  spreadRadius: 10,
+                height: 60,
+                margin: EdgeInsets.all(10),
+                width: 60,
+                decoration: BoxDecoration(
+                  color: color,
+                  border: Border.all(color: Colors.black12, width: 0.25),
+                  borderRadius: BorderRadius.circular(10),
                 ),
-              ],
-              border: Border.all(color: Colors.black12, width: 0.25),
-              borderRadius: BorderRadius.circular(25),
-            ),
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              physics: BouncingScrollPhysics(
-
-              ),
-              child: Row(
-                children: [
-                  Container(
-                    height: 60,
-                    margin: EdgeInsets.all(10),
-                    width: 60,
-                    decoration: BoxDecoration(
-                      color: Colors.red,
-                      border: Border.all(color: Colors.black12, width: 0.25),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          );
-  }
-
-  Container Arrow_container() {
-    return Container(
-            margin: EdgeInsets.all(20),
-            height: 300,
-            width: 400,
-            decoration: BoxDecoration(
-              color: Color(0xffFAFAFA),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black12,
-                  blurRadius: 10,
-                  spreadRadius: 10,
-                ),
-              ],
-              borderRadius: BorderRadius.circular(20),
-              // boxShadow: ,
-              border: Border.all(
-                color: Colors.black12,
-                width: 0.25,
-              ),
-            ),
-            child: Icon(
-              Icons.arrow_back_ios_rounded,
-              color: Colors.black,
-              size: 80,
-            ),
-          );
+              );
   }
 }
+
 List iconList = [
   Icons.add,
   Icons.remove,
@@ -370,13 +379,17 @@ List iconList = [
   Icons.adb_rounded,
   Icons.add_a_photo_outlined,
   Icons.add_call,
-
 ];
-List colorList =[
+List colorList = [
   Colors.indigo,
   Colors.blue,
   Colors.green,
   Colors.yellow,
   Colors.orange,
   Colors.red,
+  Colors.deepPurple,
+  Colors.pink,
+  Colors.teal,
 ];
+Color selectcolor=Colors.black;
+IconData selecticon=Icons.cabin;

@@ -1,47 +1,52 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: '',
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.pinkAccent,
-          centerTitle: true,
-          title: const Text(
-            'Click To Action',
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w600,
-            ),
+class Clicktoaction extends StatefulWidget {
+  const Clicktoaction({super.key});
+
+  @override
+  State<Clicktoaction> createState() => _ClicktoactionState();
+}
+
+class _ClicktoactionState extends State<Clicktoaction> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.pinkAccent,
+        centerTitle: true,
+        title: const Text(
+          'Click To Action',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w600,
           ),
         ),
-        // backgroundColor: Color(0xff474069),
-        body: Center(
-          child: Container(
-            width: 270,
-            height: 80,
+      ),
+      // backgroundColor: Color(0xff474069),
+      body: Center(
+        child: Container(
+          width: 270,
+          height: 80,
 
-            decoration: BoxDecoration(
+          decoration: BoxDecoration(
             border: Border.all(width: 1,color: Colors.blue),
-              shape: BoxShape.rectangle,
-              color: Colors.white,
-              boxShadow: [
-                BoxShadow(
-                  blurRadius: 30,
-                  spreadRadius: 30,
-                  color: Colors.blue,
-                ),
-              ],
-              borderRadius: const BorderRadius.all(
-                Radius.circular(50),
+            shape: BoxShape.rectangle,
+            color: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                blurRadius: 30,
+                spreadRadius: 30,
+                color: Colors.blue,
               ),
+            ],
+            borderRadius: const BorderRadius.all(
+              Radius.circular(50),
+            ),
 
-              /*isme box ke border ki radius set
+            /*isme box ke border ki radius set
               kar sakte he or 'BorderRadius.all' se Radius ka shape deside kar sakte he accordingly required value se*/
-              gradient: const LinearGradient(
+            gradient: const LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
@@ -52,20 +57,20 @@ void main() {
                 Color(0xffFE3E79),
                 Color(0xffFF4F6B),
               ],),
-            ),
-            child: const Center(
-              child: Text(
-                'Call to Action',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 25,
-                ),
+          ),
+          child: const Center(
+            child: Text(
+              'Call to Action',
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 25,
               ),
             ),
           ),
         ),
       ),
-    ),
-  );
+    );
+  }
 }
+

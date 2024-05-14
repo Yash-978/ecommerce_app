@@ -219,7 +219,25 @@ void main() {
 import 'package:ecommerce_app/Home/Component/Lec%205.1/trial%20file.dart';
 import 'package:flutter/material.dart';
 
+import 'Home/Component/Lec 5.1/Letter Cover.dart';
+import 'Home/Component/Lec 5.1/Mashal.dart';
+import 'Home/Component/Lec 5.1/MissionsofRNW.dart';
+import 'Home/Component/Lec 5.1/Mix_up.dart';
+import 'Home/Component/Lec 5.1/Oppened doors.dart';
+import 'Home/Component/Lec 5.1/Smile Emoji.dart';
+import 'Home/Component/Lec 5.2/A Indian Flag.dart';
+import 'Home/Component/Lec 5.2/DarkShadow.dart';
+import 'Home/Component/Lec 5.2/Gradient Button.dart';
+import 'Home/Component/Lec 5.2/Launch Button.dart';
+import 'Home/Component/Lec 5.2/Shadow_button.dart';
+import 'Home/Component/Lec 5.2/Watch.dart';
+import 'Home/Component/Lec 5.2/click to action.dart';
+import 'Home/Component/Lec 5.4/Calc.dart';
+import 'Home/Component/Lec 5.4/Chess.dart';
+import 'Home/Component/Lec 5.4/Dynamic List.dart';
+import 'Home/Component/Lec 5.4/Icons Editor ui.dart';
 import 'Home/Component/Lec 5.4/Icons.dart';
+import 'Home/Component/Lec 5.4/Map.dart';
 import 'Home/Component/Lec 5.5/Splitter.dart';
 import 'Home/Component/Lec 5.5/Wall.dart';
 void main()
@@ -233,7 +251,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-    home : SPLITTER(),
+    home : Chess(),
     );
   }
 }
